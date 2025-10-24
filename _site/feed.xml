@@ -1,1 +1,143 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>https://www.mkbntech.com/</id><title>MKBN-Tech</title><subtitle>Document site for MKBN Tech YouTube Channel.</subtitle> <updated>2025-10-24T21:06:08+05:30</updated> <author> <name>MKBN Tech</name> <uri>https://www.mkbntech.com/</uri> </author><link rel="self" type="application/atom+xml" href="https://www.mkbntech.com/feed.xml"/><link rel="alternate" type="text/html" hreflang="en" href="https://www.mkbntech.com/"/> <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator> <rights> © 2025 MKBN Tech </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> <entry><title>Rook ceph: cloud-native storage orchestrator + distributed storage system</title><link href="https://www.mkbntech.com/posts/rook-ceph/" rel="alternate" type="text/html" title="Rook ceph: cloud-native storage orchestrator + distributed storage system" /><published>2025-10-17T07:39:00+05:30</published> <updated>2025-10-17T07:39:00+05:30</updated> <id>https://www.mkbntech.com/posts/rook-ceph/</id> <content type="text/html" src="https://www.mkbntech.com/posts/rook-ceph/" /> <author> <name>MKBN Tech</name> </author> <category term="storage" /> <summary>Prerequisites: Kubernetes v1.16 (or) higher Helm 3.x Raw devices (no partitions or formatted filesystems) Raw partitions (no formatted filesystem) LVM Logical Volumes (no formatted filesystem) Persistent Volumes available from a storage class in block mode Installation Requirements: Ceph OSDs have a dependency on LVM when OSDs are created on raw devices (or) partitions. Re...</summary> </entry> <entry><title>Let's build a HA kubernetes cluster on baremetal servers</title><link href="https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/" rel="alternate" type="text/html" title="Let&amp;apos;s build a HA kubernetes cluster on baremetal servers" /><published>2025-10-10T19:45:00+05:30</published> <updated>2025-10-10T19:45:00+05:30</updated> <id>https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/</id> <content type="text/html" src="https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/" /> <author> <name>MKBN Tech</name> </author> <category term="kubernetes" /> <summary>HA Kubernetes cluster with containerd Prerequisites: 2 Ubuntu 24.04 LoadBalancer node’s 3 Ubuntu 24.04 Kubernetes master node’s 3 Ubuntu 24.04 Kubernetes worker node’s Generate TLS certificates: Prepare CFSSL on a Single Master Node (Certificate Authority Host): SSH into one of the master-node and run: { mkdir ~/certs &amp;amp;&amp;amp; cd ~/certs wget https://pkg.cfssl.org/R1.2/cfssl_l...</summary> </entry> <entry><title>How to setup loadbalancing with haproxy &amp; keepalived</title><link href="https://www.mkbntech.com/posts/haproxy-keepalived/" rel="alternate" type="text/html" title="How to setup loadbalancing with haproxy &amp;amp; keepalived" /><published>2025-10-10T18:49:00+05:30</published> <updated>2025-10-10T18:49:00+05:30</updated> <id>https://www.mkbntech.com/posts/haproxy-keepalived/</id> <content type="text/html" src="https://www.mkbntech.com/posts/haproxy-keepalived/" /> <author> <name>MKBN Tech</name> </author> <category term="loadbalancer" /> <summary>Prerequisites: 2 Ubuntu 24.04 node’s HAProxy Configurations: SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip&amp;gt; and add an extra entry for each additi...</summary> </entry> <entry><title>Running Jenkins on Kubernetes</title><link href="https://www.mkbntech.com/posts/Jenkins-on-kuberntes/" rel="alternate" type="text/html" title="Running Jenkins on Kubernetes" /><published>2024-11-04T11:25:00+05:30</published> <updated>2024-11-04T11:25:00+05:30</updated> <id>https://www.mkbntech.com/posts/Jenkins-on-kuberntes/</id> <content type="text/html" src="https://www.mkbntech.com/posts/Jenkins-on-kuberntes/" /> <author> <name>MKBN Tech</name> </author> <category term="jenkins" /> <summary>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software. Prerequisites: Kubernetes cluster Helm 3.x Installing Jenkins with Helm: Helm v3.0+ must be installed on your workstation. Add the jenkins Helm repository: helm repo add jenkins https://charts.jenkins.io Fetch...</summary> </entry> <entry><title>Deploy a kubernetes cluster using ansible</title><link href="https://www.mkbntech.com/posts/k8s-cluster-using-ansible/" rel="alternate" type="text/html" title="Deploy a kubernetes cluster using ansible" /><published>2024-06-29T22:36:00+05:30</published> <updated>2024-06-29T22:36:00+05:30</updated> <id>https://www.mkbntech.com/posts/k8s-cluster-using-ansible/</id> <content type="text/html" src="https://www.mkbntech.com/posts/k8s-cluster-using-ansible/" /> <author> <name>MKBN Tech</name> </author> <category term="kuberntes" /> <summary>Deploying a Kubernetes cluster can be a daunting task, but with the right tools and guidance, it becomes manageable and efficient. In this blog post, I walk you through the process of setting up a Kubernetes cluster with single master and two worker nodes using Ansible role. This setup is perfect for development and testing environments, providing a solid foundation to explore Kubernetes’ powe...</summary> </entry> </feed>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://www.mkbntech.com/</id>
+  <title>MKBN-Tech</title>
+  <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
+  <updated>2025-10-24T21:12:54+05:30</updated>
+  <author>
+    <name>MKBN Tech</name>
+    <uri>https://www.mkbntech.com/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://www.mkbntech.com/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://www.mkbntech.com/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 MKBN Tech </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Rook ceph: cloud-native storage orchestrator + distributed storage system</title>
+    <link href="https://www.mkbntech.com/posts/rook-ceph/" rel="alternate" type="text/html" title="Rook ceph: cloud-native storage orchestrator + distributed storage system" />
+    <published>2025-10-17T07:39:00+05:30</published>
+  
+    <updated>2025-10-17T07:39:00+05:30</updated>
+  
+    <id>https://www.mkbntech.com/posts/rook-ceph/</id>
+    <content type="text/html" src="https://www.mkbntech.com/posts/rook-ceph/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="storage" />
+    
+  
+
+  <summary>Prerequisites:     Kubernetes v1.16 (or) higher   Helm 3.x   Raw devices (no partitions or formatted filesystems)   Raw partitions (no formatted filesystem)   LVM Logical Volumes (no formatted filesystem)   Persistent Volumes available from a storage class in block mode   Installation Requirements:     Ceph OSDs have a dependency on LVM when OSDs are created on raw devices (or) partitions.   Re...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Let's build a HA kubernetes cluster on baremetal servers</title>
+    <link href="https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/" rel="alternate" type="text/html" title="Let&amp;apos;s build a HA kubernetes cluster on baremetal servers" />
+    <published>2025-10-10T19:45:00+05:30</published>
+  
+    <updated>2025-10-10T19:45:00+05:30</updated>
+  
+    <id>https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/</id>
+    <content type="text/html" src="https://www.mkbntech.com/posts/k8s-kubeadm-ha-cluster/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="kubernetes" />
+    
+  
+
+  <summary>HA Kubernetes cluster with containerd  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   Generate TLS certificates:  Prepare CFSSL on a Single Master Node (Certificate Authority Host): SSH into one of the master-node and run:  {   mkdir ~/certs &amp;amp;&amp;amp; cd ~/certs   wget https://pkg.cfssl.org/R1.2/cfssl_l...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>How to setup loadbalancing with haproxy &amp; keepalived</title>
+    <link href="https://www.mkbntech.com/posts/haproxy-keepalived/" rel="alternate" type="text/html" title="How to setup loadbalancing with haproxy &amp;amp; keepalived" />
+    <published>2025-10-10T18:49:00+05:30</published>
+  
+    <updated>2025-10-10T18:49:00+05:30</updated>
+  
+    <id>https://www.mkbntech.com/posts/haproxy-keepalived/</id>
+    <content type="text/html" src="https://www.mkbntech.com/posts/haproxy-keepalived/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="loadbalancer" />
+    
+  
+
+  <summary>Prerequisites:    2 Ubuntu 24.04 node’s   HAProxy Configurations:  SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy   Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip&amp;gt; and add an extra entry for each additi...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Running Jenkins on Kubernetes</title>
+    <link href="https://www.mkbntech.com/posts/Jenkins-on-kuberntes/" rel="alternate" type="text/html" title="Running Jenkins on Kubernetes" />
+    <published>2024-11-04T11:25:00+05:30</published>
+  
+    <updated>2024-11-04T11:25:00+05:30</updated>
+  
+    <id>https://www.mkbntech.com/posts/Jenkins-on-kuberntes/</id>
+    <content type="text/html" src="https://www.mkbntech.com/posts/Jenkins-on-kuberntes/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="jenkins" />
+    
+  
+
+  <summary>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.  Prerequisites:     Kubernetes cluster   Helm 3.x   Installing Jenkins with Helm: Helm v3.0+ must be installed on your workstation.  Add the jenkins Helm repository: helm repo add jenkins https://charts.jenkins.io   Fetch...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Deploy a kubernetes cluster using ansible</title>
+    <link href="https://www.mkbntech.com/posts/k8s-cluster-using-ansible/" rel="alternate" type="text/html" title="Deploy a kubernetes cluster using ansible" />
+    <published>2024-06-29T22:36:00+05:30</published>
+  
+    <updated>2024-06-29T22:36:00+05:30</updated>
+  
+    <id>https://www.mkbntech.com/posts/k8s-cluster-using-ansible/</id>
+    <content type="text/html" src="https://www.mkbntech.com/posts/k8s-cluster-using-ansible/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="kuberntes" />
+    
+  
+
+  <summary>Deploying a Kubernetes cluster can be a daunting task, but with the right tools and guidance, it becomes manageable and efficient. In this blog post, I walk you through the process of setting up a Kubernetes cluster with single master and two worker nodes using Ansible role.  This setup is perfect for development and testing environments, providing a solid foundation to explore Kubernetes’ powe...</summary>
+
+  </entry>
+
+</feed>
+
+
