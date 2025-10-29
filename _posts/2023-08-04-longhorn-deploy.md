@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meet Longhorn a cloud native distributed block storage for Kubernetes"
-date: 2023-08-04 15:26:00 +0800
+date: 2025-10-29 10:50:00 +0800
 categories: kubernetes
 tags: longhorn
 image:
@@ -47,7 +47,15 @@ systemctl status iscsid
 
 *Note: `jq`[sudo apt install -y jq] maybe required to be installed locally prior to running env check script.*
 ```sh
-curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.5.1/scripts/environment_check.sh | bash
+# For AMD64 platform
+curl -sSfL -o longhornctl https://github.com/longhorn/cli/releases/download/v1.10.0/longhornctl-linux-amd64
+
+# For ARM platform
+curl -sSfL -o longhornctl https://github.com/longhorn/cli/releases/download/v1.10.0/longhornctl-linux-arm64
+
+chmod +x longhornctl
+./longhornctl check preflight --kubeconfig=.kube/config
+
 ```
 
 ### Installing Longhorn with Helm:
@@ -72,66 +80,115 @@ helm fetch longhorn/longhorn --untar
 Install Longhorn in the longhorn namespace:
 
 ```sh
-helm install longhorn longhorn/longhorn --values /tmp/longhorn/values.yaml -n longhorn --create-namespace --version 1.7.2
+helm install longhorn longhorn/longhorn --values longhorn/values.yaml -n longhorn-system --create-namespace --version 1.10.0
 ```
 
 To confirm that the deployment succeeded, run:
 ```sh
-kubectl -n longhorn get pod
-```
-
-### Accessing the Longhorn UI:
-
-Get the Longhorn’s external service IP:
-```sh
-kubectl -n longhorn get svc
-```
-Use `CLUSTER-IP` of the `longhorn-frontend` to access the Longhorn UI using port forward:
-
-```sh
-kubectl port-forward svc/longhorn-frontend 8080:80 -n longhorn
+kubectl -n longhorn-system get pod
 ```
 
 ### Enabling basic authentication with ingress for longhorn UI
 *Authentication is not enabled by default for kubectl and Helm installations.*
 
-Create a basic authentication file `auth`. It’s important the file generated is named auth (actually - that the secret has a key data.auth), otherwise the Ingress returns a 503.
+*Note : Create a basic authentication file `auth`. It’s important the file generated is named auth (actually - that the secret has a key data.auth), otherwise the Ingress returns a 503.*
 
 ```sh
 USER=<USERNAME_HERE>; PASSWORD=<PASSWORD_HERE>; echo "${USER}:$(openssl passwd -stdin -apr1 <<< ${PASSWORD})" >> auth
 ```
-Create a secret:
+### Create a secret:
 
 ```sh
-kubectl -n longhorn create secret generic basic-auth --from-file=auth
+kubectl -n longhorn-system create secret generic basic-auth --from-file=auth
 ```
 
-Create the ingress resource:
+### Create the ingress resource:
 
 ```sh
 cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: longhorn-ingress
-  namespace: longhorn
+  name: longhorn-frontend
+  namespace: longhorn-system
   annotations:
     nginx.ingress.kubernetes.io/auth-type: basic
-    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
     nginx.ingress.kubernetes.io/auth-secret: basic-auth
-    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
-    nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - longhorn.mkbn.in
+      secretName: tls-longhorn-frontend
   rules:
-  - http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: longhorn-frontend
-            port:
-              number: 80
+    - host: longhorn.mkbn.in
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: longhorn-frontend
+              port:
+                number: 80
+EOF
+```
+### Accessing the Longhorn UI:
+
+```sh
+https://longhorn.mkbn.in
+```
+
+### Accessing without ingress:
+
+Get the Longhorn’s external service IP:
+```sh
+kubectl -n longhorn-system get svc
+```
+Use `CLUSTER-IP` of the `longhorn-frontend` to access the Longhorn UI using port forward:
+
+```sh
+kubectl port-forward svc/longhorn-frontend 8080:80 -n longhorn-system
+```
+
+### Create a demo StatefulSet using the default storage class:
+
+```sh
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: demo
+spec:
+  serviceName: "demo"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo-container
+        image: busybox
+        command: [ "sleep", "3600" ]
+        volumeMounts:
+        - name: demo-volume
+          mountPath: /data
+  volumeClaimTemplates:
+  - metadata:
+      name: demo-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "longhorn"
+      resources:
+        requests:
+          storage: 1Gi
 EOF
 ```
 
