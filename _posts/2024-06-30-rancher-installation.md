@@ -55,12 +55,10 @@ helm install \
   --set crds.enabled=true
 ```
 ## Generate a private CA and use it with Rancher via cert-manager
-
-### Generate Private CA Certificate and Key
  
 Create a config file `ca.cnf` with CA extensions:
 
-```sh title="ca.cnf"
+```sh
 [ req ]
 default_bits       = 2048
 distinguished_name = req_distinguished_name
