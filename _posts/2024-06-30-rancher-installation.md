@@ -155,6 +155,7 @@ helm install rancher rancher-stable/rancher --namespace cattle-system \
    --set ingress.tls.source=secret \
    --set ingress.tls.secretName=rancher-tls-secret \
    --set ingress.ingressClassName=nginx \
+   --set privateCA=true \
    --set replicas=3
 ```
 #### Verify that the Rancher Server is Successfully Deployed
