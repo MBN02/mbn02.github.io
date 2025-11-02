@@ -8,6 +8,12 @@ image:
   path: /assets/img/headers/HAProxy.png
 ---
 
+### Haproxy with Keepalived
+
+{% include embed/youtube.html id='UoOcLXfa8EU' %}
+
+🎞️ [Watch Video](https://www.youtube.com/watch?v=UoOcLXfa8EU)
+
 ### Prerequisites:
 - 2 Ubuntu 24.04 node's
 
@@ -176,7 +182,7 @@ vrrp_instance LB_VIP {
 }
 ```
 
-### Reference Links:
+### 🔗 Reference Links:
 
 - [Keepalived](https://keepalived.readthedocs.io/en/latest/introduction.html)
 

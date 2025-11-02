@@ -8,6 +8,8 @@ image:
   path: /assets/img/headers/longhorn.jpg
 ---
 
+### Cloud native distributed block storage for Kubernetes
+
 ### Prerequisites:
 
 **Minimum Hardware requirements:**
@@ -45,7 +47,6 @@ systemctl status iscsid
 
 **Run the Environment Check Script:**
 
-*Note: `jq`[sudo apt install -y jq] maybe required to be installed locally prior to running env check script.*
 ```sh
 # For AMD64 platform
 curl -sSfL -o longhornctl https://github.com/longhorn/cli/releases/download/v1.10.0/longhornctl-linux-amd64
@@ -156,40 +157,10 @@ kubectl port-forward svc/longhorn-frontend 8080:80 -n longhorn-system
 
 ### Create a demo StatefulSet using the default storage class:
 
+Check out the github repo: 
+
 ```sh
-cat <<EOF | kubectl apply -f -
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: demo
-spec:
-  serviceName: "demo"
-  replicas: 1
-  selector:
-    matchLabels:
-      app: demo
-  template:
-    metadata:
-      labels:
-        app: demo
-    spec:
-      containers:
-      - name: demo-container
-        image: busybox
-        command: [ "sleep", "3600" ]
-        volumeMounts:
-        - name: demo-volume
-          mountPath: /data
-  volumeClaimTemplates:
-  - metadata:
-      name: demo-volume
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "longhorn"
-      resources:
-        requests:
-          storage: 1Gi
-EOF
+kubectl apply -f gitea-demo/gitea.yaml
 ```
 
 

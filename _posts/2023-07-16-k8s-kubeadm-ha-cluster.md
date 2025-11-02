@@ -7,7 +7,11 @@ tags: kubernetes
 image:
   path: /assets/img/headers/helm.jpg
 ---
-# HA Kubernetes cluster with containerd 
+### HA Kubernetes cluster with containerd
+
+{% include embed/youtube.html id='Lbu8aQt-2VU' %}
+
+🎞️ [Watch Video](https://youtu.be/Lbu8aQt-2VU)
 
 ### Prerequisites:
 - 2 Ubuntu 24.04 LoadBalancer node's
@@ -506,7 +510,7 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 *If you use custom podCIDR (not 10.244.0.0/16) you first need to download the above manifest and modify the network to match your one*
 
 
-### Reference Links:
+### 🔗 Reference Links:
 
 - [Containerd](https://github.com/containerd/containerd)
 
