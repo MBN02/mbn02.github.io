@@ -10,9 +10,9 @@ image:
 
 ### Haproxy with Keepalived
 
-{% include embed/youtube.html id='UoOcLXfa8EU' %}
+{% include embed/youtube.html id='Lbu8aQt-2VU' %}
 
-🎞️ [Watch Video](https://www.youtube.com/watch?v=UoOcLXfa8EU)
+🎞️ [Watch Video](https://youtu.be/Lbu8aQt-2VU)
 
 ### Prerequisites:
 - 2 Ubuntu 24.04 node's
