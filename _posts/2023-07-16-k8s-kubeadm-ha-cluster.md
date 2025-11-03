@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Let's build a HA kubernetes cluster on baremetal servers"
-date: 2025-10-10 22:15:00 +0800
+date: 2025-11-03 16:55:00 +0800
 categories: kubernetes
 tags: kubernetes
 image:
@@ -92,12 +92,12 @@ cat > kubernetes-csr.json <<EOF
     "kubernetes.default",
     "kubernetes.default.svc",
     "kubernetes.default.svc.cluster.local",
-    "192.168.122.60",     # Load balancer VIP
-    "192.168.122.101",    # master01 IP
-    "192.168.122.102",    # master02 IP
-    "192.168.122.103",    # master03 IP
-    "192.168.122.51",     # load01 IP
-    "192.168.122.52"      # load02 IP
+    "<Load balancer VIP>",    
+    "<k8s-master-1-ip>",
+    "<k8s-master-2-ip>",
+    "<k8s-master-3-ip>",
+    "<load-01 IP>",     
+    "<load-02 IP>"      
   ],
   "key": {
     "algo": "rsa",
@@ -174,7 +174,7 @@ EOF
 
 ```sh
 {
-declare -a NODES=(192.168.122.101 192.168.122.102 192.168.122.103)
+declare -a NODES=(<k8s-master-1-ip> <k8s-master-2-ip> <k8s-master-3-ip>)
 
 for node in ${NODES[@]}; do
   scp ca.pem kubernetes.pem kubernetes-key.pem root@$node:/etc/kubernetes/pki/
@@ -318,7 +318,7 @@ apt-mark hold kubelet kubeadm kubectl
 
 ```sh
 {
-declare -a NODES=(192.168.122.101 192.168.122.102 192.168.122.103)
+declare -a NODES=(<k8s-master-1-ip> <k8s-master-2-ip> <k8s-master-3-ip>)
 
 for node in ${NODES[@]}; do
   scp ca.pem kubernetes.pem kubernetes-key.pem root@$node: 
