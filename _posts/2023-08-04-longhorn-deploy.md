@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "Meet Longhorn a cloud native distributed block storage for Kubernetes"
-date: 2025-11-05 12:12:00 +0800
+date: 2025-11-06 11:12:00 +0800
 categories: kubernetes
 tags: longhorn
 image:
   path: /assets/img/headers/longhorn.jpg
 ---
-
 ### Cloud native distributed block storage for Kubernetes
 
 {% include embed/youtube.html id='ts7LAnM744Y' %}
