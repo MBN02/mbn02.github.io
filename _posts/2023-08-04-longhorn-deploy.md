@@ -150,6 +150,7 @@ https://longhorn.mkbn.in
 ### Accessing without ingress:
 
 Get the Longhorn’s external service IP:
+
 ```sh
 kubectl -n longhorn-system get svc
 ```
