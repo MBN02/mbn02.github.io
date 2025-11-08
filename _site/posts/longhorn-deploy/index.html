@@ -32,20 +32,20 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Meet Longhorn a cloud native distributed block storage for Kubernetes" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Prerequisites:" />
-<meta property="og:description" content="Prerequisites:" />
+<meta name="description" content="Cloud native distributed block storage for Kubernetes" />
+<meta property="og:description" content="Cloud native distributed block storage for Kubernetes" />
 <link rel="canonical" href="http://localhost:4000/posts/longhorn-deploy/" />
 <meta property="og:url" content="http://localhost:4000/posts/longhorn-deploy/" />
 <meta property="og:site_name" content="MKBN-Tech" />
 <meta property="og:image" content="http://localhost:4000/assets/img/headers/longhorn.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-08-04T12:56:00+05:30" />
+<meta property="article:published_time" content="2025-11-06T08:42:00+05:30" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/img/headers/longhorn.jpg" />
 <meta property="twitter:title" content="Meet Longhorn a cloud native distributed block storage for Kubernetes" />
 <meta name="twitter:site" content="@nk_mohan" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-04T12:56:00+05:30","datePublished":"2023-08-04T12:56:00+05:30","description":"Prerequisites:","headline":"Meet Longhorn a cloud native distributed block storage for Kubernetes","image":"http://localhost:4000/assets/img/headers/longhorn.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/longhorn-deploy/"},"url":"http://localhost:4000/posts/longhorn-deploy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-06T19:20:57+05:30","datePublished":"2025-11-06T08:42:00+05:30","description":"Cloud native distributed block storage for Kubernetes","headline":"Meet Longhorn a cloud native distributed block storage for Kubernetes","image":"http://localhost:4000/assets/img/headers/longhorn.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/longhorn-deploy/"},"url":"http://localhost:4000/posts/longhorn-deploy/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -254,7 +254,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/headers/mkbn-tech.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <a class="site-title d-block" href="/">MKBN-Tech</a>
-    <p class="site-subtitle fst-italic mb-0">Document site for MKBN Tech YouTube Channel.</p>
+    <p class="site-subtitle fst-italic mb-0">Cloud Native Enthusiast・Platform Engineer・Automation Addict・Real-World Tech</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -695,6 +695,61 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -742,18 +797,41 @@
 
 <time
   
-  data-ts="1691133960"
+  data-ts="1762398720"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug  4, 2023
+  Nov  6, 2025
 </time>
 
       </span>
 
       <!-- lastmod date -->
+      
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1762437057"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Nov  6, 2025
+</time>
+
+        </span>
       
 
       
@@ -806,7 +884,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="432 words"
+  title="500 words"
 >
   <em>2 min</em> read</span>
 
@@ -840,7 +918,13 @@
   
 
   <div class="content">
-    <h3 id="prerequisites"><span class="me-2">Prerequisites:</span><a href="#prerequisites" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <h3 id="cloud-native-distributed-block-storage-for-kubernetes"><span class="me-2">Cloud native distributed block storage for Kubernetes</span><a href="#cloud-native-distributed-block-storage-for-kubernetes" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<iframe class="embed-video" loading="lazy" src="https://www.youtube.com/embed/ts7LAnM744Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>🎞️ <a href="https://youtu.be/ts7LAnM744Y">Watch Video</a></p>
+
+<h3 id="prerequisites"><span class="me-2">Prerequisites:</span><a href="#prerequisites" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><strong>Minimum Hardware requirements:</strong></p>
 
@@ -890,11 +974,26 @@ systemctl status iscsid
 
 <p><strong>Run the Environment Check Script:</strong></p>
 
-<p><em>Note: <code class="language-plaintext highlighter-rouge">jq</code>[sudo apt install -y jq] maybe required to be installed locally prior to running env check script.</em></p>
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-sSfL</span> https://raw.githubusercontent.com/longhorn/longhorn/v1.5.1/scripts/environment_check.sh | bash
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c"># For AMD64 platform</span>
+curl <span class="nt">-sSfL</span> <span class="nt">-o</span> longhornctl https://github.com/longhorn/cli/releases/download/v1.10.0/longhornctl-linux-amd64
+
+<span class="c"># For ARM platform</span>
+curl <span class="nt">-sSfL</span> <span class="nt">-o</span> longhornctl https://github.com/longhorn/cli/releases/download/v1.10.0/longhornctl-linux-arm64
+
+<span class="nb">chmod</span> +x longhornctl
+./longhornctl check preflight <span class="nt">--kubeconfig</span><span class="o">=</span>.kube/config
+
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="installing-longhorn-with-helm"><span class="me-2">Installing Longhorn with Helm:</span><a href="#installing-longhorn-with-helm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -927,51 +1026,35 @@ systemctl status iscsid
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>helm <span class="nb">install </span>longhorn longhorn/longhorn <span class="nt">--values</span> /tmp/longhorn/values.yaml <span class="nt">-n</span> longhorn <span class="nt">--create-namespace</span> <span class="nt">--version</span> 1.7.2
+</pre></td><td class="rouge-code"><pre>helm <span class="nb">install </span>longhorn longhorn/longhorn <span class="nt">--values</span> longhorn/values.yaml <span class="nt">-n</span> longhorn-system <span class="nt">--create-namespace</span> <span class="nt">--version</span> 1.10.0
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>To confirm that the deployment succeeded, run:</p>
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn get pod
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="accessing-the-longhorn-ui"><span class="me-2">Accessing the Longhorn UI:</span><a href="#accessing-the-longhorn-ui" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>Get the Longhorn’s external service IP:</p>
-<div class="language-sh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn get svc
-</pre></td></tr></tbody></table></code></div></div>
-<p>Use <code class="language-plaintext highlighter-rouge">CLUSTER-IP</code> of the <code class="language-plaintext highlighter-rouge">longhorn-frontend</code> to access the Longhorn UI using port forward:</p>
-
-<div class="language-sh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>kubectl port-forward svc/longhorn-frontend 8080:80 <span class="nt">-n</span> longhorn
+</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn-system get pod
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="enabling-basic-authentication-with-ingress-for-longhorn-ui"><span class="me-2">Enabling basic authentication with ingress for longhorn UI</span><a href="#enabling-basic-authentication-with-ingress-for-longhorn-ui" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <p><em>Authentication is not enabled by default for kubectl and Helm installations.</em></p>
 
-<p>Create a basic authentication file <code class="language-plaintext highlighter-rouge">auth</code>. It’s important the file generated is named auth (actually - that the secret has a key data.auth), otherwise the Ingress returns a 503.</p>
+<p><em>Note : Create a basic authentication file <code class="language-plaintext highlighter-rouge">auth</code>. It’s important the file generated is named auth (actually - that the secret has a key data.auth), otherwise the Ingress returns a 503.</em></p>
 
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nv">USER</span><span class="o">=</span>&lt;USERNAME_HERE&gt;<span class="p">;</span> <span class="nv">PASSWORD</span><span class="o">=</span>&lt;PASSWORD_HERE&gt;<span class="p">;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">USER</span><span class="k">}</span><span class="s2">:</span><span class="si">$(</span>openssl passwd <span class="nt">-stdin</span> <span class="nt">-apr1</span> <span class="o">&lt;&lt;&lt;</span> <span class="k">${</span><span class="nv">PASSWORD</span><span class="k">}</span><span class="si">)</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> auth
 </pre></td></tr></tbody></table></code></div></div>
-<p>Create a secret:</p>
+<h3 id="create-a-secret"><span class="me-2">Create a secret:</span><a href="#create-a-secret" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn create secret generic basic-auth <span class="nt">--from-file</span><span class="o">=</span>auth
+</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn-system create secret generic basic-auth <span class="nt">--from-file</span><span class="o">=</span>auth
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Create the ingress resource:</p>
+<h3 id="create-the-ingress-resource"><span class="me-2">Create the ingress resource:</span><a href="#create-the-ingress-resource" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -999,33 +1082,79 @@ systemctl status iscsid
 22
 23
 24
+25
+26
+27
+28
+29
+30
 </pre></td><td class="rouge-code"><pre><span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh"> | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: longhorn-ingress
-  namespace: longhorn
+  name: longhorn-frontend
+  namespace: longhorn-system
   annotations:
     nginx.ingress.kubernetes.io/auth-type: basic
-    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
     nginx.ingress.kubernetes.io/auth-secret: basic-auth
-    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required '
-    nginx.ingress.kubernetes.io/proxy-body-size: 10000m
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - longhorn.mkbn.in
+      secretName: tls-longhorn-frontend
   rules:
-  - http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: longhorn-frontend
-            port:
-              number: 80
+    - host: longhorn.mkbn.in
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: longhorn-frontend
+              port:
+                number: 80
 </span><span class="no">EOF
 </span></pre></td></tr></tbody></table></code></div></div>
+<h3 id="accessing-the-longhorn-ui"><span class="me-2">Accessing the Longhorn UI:</span><a href="#accessing-the-longhorn-ui" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Reference Links:</p>
+<div class="language-sh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://longhorn.mkbn.in
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="accessing-without-ingress"><span class="me-2">Accessing without ingress:</span><a href="#accessing-without-ingress" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Get the Longhorn’s external service IP:</p>
+
+<div class="language-sh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>kubectl <span class="nt">-n</span> longhorn-system get svc
+</pre></td></tr></tbody></table></code></div></div>
+<p>Use <code class="language-plaintext highlighter-rouge">CLUSTER-IP</code> of the <code class="language-plaintext highlighter-rouge">longhorn-frontend</code> to access the Longhorn UI using port forward:</p>
+
+<div class="language-sh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>kubectl port-forward svc/longhorn-frontend 8080:80 <span class="nt">-n</span> longhorn-system
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="create-a-demo-statefulset-using-the-default-storage-class"><span class="me-2">Create a demo StatefulSet using the default storage class:</span><a href="#create-a-demo-statefulset-using-the-default-storage-class" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Check out the <a href="https://github.com/mkbntech/longhorn">github repo</a> for code sample.</p>
+
+<div class="language-sh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>kubectl apply <span class="nt">-f</span> gitea-demo/gitea.yaml
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>🔗 Reference Links:</p>
 
 <ul>
   <li>
@@ -1161,7 +1290,14 @@ spec:
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/rook-ceph/">Rook ceph: cloud-native storage orchestrator + distributed storage system</a>
+          <a href="/posts/rancher-installation/">Install Rancher with Lets Encrypt on Kubernetes</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/longhorn-deploy/">Meet Longhorn a cloud native distributed block storage for Kubernetes</a>
         </li>
       
         
@@ -1176,20 +1312,6 @@ spec:
         
         <li class="text-truncate lh-lg">
           <a href="/posts/haproxy-keepalived/">How to setup loadbalancing with haproxy & keepalived</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Jenkins-on-kuberntes/">Running Jenkins on Kubernetes</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/k8s-cluster-using-ansible/">Deploy a kubernetes cluster using ansible</a>
         </li>
       
     </ul>
@@ -1218,50 +1340,6 @@ spec:
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -1318,271 +1396,6 @@ spec:
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1607,25 +1420,7 @@ spec:
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>
@@ -1706,55 +1501,7 @@ spec:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -1782,72 +1529,16 @@ spec:
 
 <time
   
-  data-ts="1760105700"
+  data-ts="1762160100"
   data-df="ll"
   
 >
-  Oct 10, 2025
+  Nov  3, 2025
 </time>
 
               <h4 class="pt-0 my-2">Let's build a HA kubernetes cluster on baremetal servers</h4>
               <div class="text-muted">
-                <p>HA Kubernetes cluster with containerd  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   Generate TLS certif...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/purellb-openlb-installation/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1693404000"
-  data-df="ll"
-  
->
-  Aug 30, 2023
-</time>
-
-              <h4 class="pt-0 my-2">PureLB & OpenELB: LB implementations for bare-metal K8s clusters</h4>
-              <div class="text-muted">
-                <p>PureLB PureLB is a Service Load Balancer Controller for Kubernetes.  Instal PureLB using helm charts:  1 2 3 4 5 6 7 helm repo add purelb https://gitlab.com/api/v4/projects/20400619/packages/helm/s...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/kubernetes-dashboard/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1691036760"
-  data-df="ll"
-  
->
-  Aug  3, 2023
-</time>
-
-              <h4 class="pt-0 my-2">Deploy kubernetes dashboard with user account + Ingress</h4>
-              <div class="text-muted">
-                <p>Kubernetes dashboard is a web-based user interface. You can use Dashboard to deploy containerized applications to a Kubernetes cluster, troubleshoot your containerized application, and manage the c...</p>
+                <p>HA Kubernetes cluster with containerd    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   G...</p>
               </div>
             </div>
           </a>
@@ -1868,21 +1559,21 @@ spec:
 
   
     <a
-      href="/posts/kubernetes-dashboard/"
+      href="/posts/haproxy-keepalived/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Deploy kubernetes dashboard with user account + Ingress</p>
+      <p>How to setup loadbalancing with haproxy & keepalived</p>
     </a>
   
 
   
     <a
-      href="/posts/purellb-openlb-installation/"
+      href="/posts/rancher-installation/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>PureLB & OpenELB: LB implementations for bare-metal K8s clusters</p>
+      <p>Install Rancher with Lets Encrypt on Kubernetes</p>
     </a>
   
 </nav>
@@ -1917,7 +1608,7 @@ spec:
   <p>Using the <a
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title="v7.4.0"
+        title="v7.4.1"
         href="https://github.com/cotes2020/jekyll-theme-chirpy"
         target="_blank"
         rel="noopener"
@@ -1954,50 +1645,6 @@ spec:
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -2054,271 +1701,6 @@ spec:
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2343,25 +1725,7 @@ spec:
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>

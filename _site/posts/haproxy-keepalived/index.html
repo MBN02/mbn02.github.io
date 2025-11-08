@@ -32,20 +32,20 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="How to setup loadbalancing with haproxy &amp; keepalived" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Prerequisites: 2 Ubuntu 24.04 node’s" />
-<meta property="og:description" content="Prerequisites: 2 Ubuntu 24.04 node’s" />
+<meta name="description" content="Haproxy with Keepalived" />
+<meta property="og:description" content="Haproxy with Keepalived" />
 <link rel="canonical" href="http://localhost:4000/posts/haproxy-keepalived/" />
 <meta property="og:url" content="http://localhost:4000/posts/haproxy-keepalived/" />
 <meta property="og:site_name" content="MKBN-Tech" />
 <meta property="og:image" content="http://localhost:4000/assets/img/headers/HAProxy.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-10-10T18:49:00+05:30" />
+<meta property="article:published_time" content="2025-11-03T14:25:00+05:30" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/img/headers/HAProxy.png" />
 <meta property="twitter:title" content="How to setup loadbalancing with haproxy &amp; keepalived" />
 <meta name="twitter:site" content="@nk_mohan" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-10T18:49:00+05:30","datePublished":"2025-10-10T18:49:00+05:30","description":"Prerequisites: 2 Ubuntu 24.04 node’s","headline":"How to setup loadbalancing with haproxy &amp; keepalived","image":"http://localhost:4000/assets/img/headers/HAProxy.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/haproxy-keepalived/"},"url":"http://localhost:4000/posts/haproxy-keepalived/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-03T17:02:13+05:30","datePublished":"2025-11-03T14:25:00+05:30","description":"Haproxy with Keepalived","headline":"How to setup loadbalancing with haproxy &amp; keepalived","image":"http://localhost:4000/assets/img/headers/HAProxy.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/haproxy-keepalived/"},"url":"http://localhost:4000/posts/haproxy-keepalived/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -254,7 +254,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/headers/mkbn-tech.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <a class="site-title d-block" href="/">MKBN-Tech</a>
-    <p class="site-subtitle fst-italic mb-0">Document site for MKBN Tech YouTube Channel.</p>
+    <p class="site-subtitle fst-italic mb-0">Cloud Native Enthusiast・Platform Engineer・Automation Addict・Real-World Tech</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -673,6 +673,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -785,18 +796,41 @@
 
 <time
   
-  data-ts="1760102340"
+  data-ts="1762160100"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Oct 10, 2025
+  Nov  3, 2025
 </time>
 
       </span>
 
       <!-- lastmod date -->
+      
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1762169533"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Nov  3, 2025
+</time>
+
+        </span>
       
 
       
@@ -849,7 +883,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="585 words"
+  title="592 words"
 >
   <em>3 min</em> read</span>
 
@@ -883,7 +917,13 @@
   
 
   <div class="content">
-    <h3 id="prerequisites"><span class="me-2">Prerequisites:</span><a href="#prerequisites" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <h3 id="haproxy-with-keepalived"><span class="me-2">Haproxy with Keepalived</span><a href="#haproxy-with-keepalived" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<iframe class="embed-video" loading="lazy" src="https://www.youtube.com/embed/Lbu8aQt-2VU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>🎞️ <a href="https://youtu.be/Lbu8aQt-2VU">Watch Video</a></p>
+
+<h3 id="prerequisites"><span class="me-2">Prerequisites:</span><a href="#prerequisites" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
   <li>2 Ubuntu 24.04 node’s</li>
 </ul>
@@ -1182,7 +1222,7 @@ vrrp_instance LB_VIP <span class="o">{</span>
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="reference-links"><span class="me-2">Reference Links:</span><a href="#reference-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="-reference-links"><span class="me-2">🔗 Reference Links:</span><a href="#-reference-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1318,7 +1358,14 @@ vrrp_instance LB_VIP <span class="o">{</span>
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/rook-ceph/">Rook ceph: cloud-native storage orchestrator + distributed storage system</a>
+          <a href="/posts/rancher-installation/">Install Rancher with Lets Encrypt on Kubernetes</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/longhorn-deploy/">Meet Longhorn a cloud native distributed block storage for Kubernetes</a>
         </li>
       
         
@@ -1333,20 +1380,6 @@ vrrp_instance LB_VIP <span class="o">{</span>
         
         <li class="text-truncate lh-lg">
           <a href="/posts/haproxy-keepalived/">How to setup loadbalancing with haproxy & keepalived</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Jenkins-on-kuberntes/">Running Jenkins on Kubernetes</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/k8s-cluster-using-ansible/">Deploy a kubernetes cluster using ansible</a>
         </li>
       
     </ul>
@@ -1375,50 +1408,6 @@ vrrp_instance LB_VIP <span class="o">{</span>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -1475,271 +1464,6 @@ vrrp_instance LB_VIP <span class="o">{</span>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1764,25 +1488,7 @@ vrrp_instance LB_VIP <span class="o">{</span>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>
@@ -1873,21 +1579,21 @@ vrrp_instance LB_VIP <span class="o">{</span>
 
   
     <a
-      href="/posts/Jenkins-on-kuberntes/"
+      href="/posts/k8s-kubeadm-ha-cluster/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Running Jenkins on Kubernetes</p>
+      <p>Let's build a HA kubernetes cluster on baremetal servers</p>
     </a>
   
 
   
     <a
-      href="/posts/k8s-kubeadm-ha-cluster/"
+      href="/posts/longhorn-deploy/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Let's build a HA kubernetes cluster on baremetal servers</p>
+      <p>Meet Longhorn a cloud native distributed block storage for Kubernetes</p>
     </a>
   
 </nav>
@@ -1922,7 +1628,7 @@ vrrp_instance LB_VIP <span class="o">{</span>
   <p>Using the <a
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title="v7.4.0"
+        title="v7.4.1"
         href="https://github.com/cotes2020/jekyll-theme-chirpy"
         target="_blank"
         rel="noopener"
@@ -1959,50 +1665,6 @@ vrrp_instance LB_VIP <span class="o">{</span>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -2059,271 +1721,6 @@ vrrp_instance LB_VIP <span class="o">{</span>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2348,25 +1745,7 @@ vrrp_instance LB_VIP <span class="o">{</span>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>

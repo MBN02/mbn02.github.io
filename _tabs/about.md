@@ -4,7 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Welcome to **MKBN Tech blog** ! This blog is dedicated to sharing clear, step-by-step guides that bring the complex world of **DevOps and platform engineering** to life. 
+Welcome to **MKBN Tech blog** ! This blog is dedicated to sharing clear, step-by-step guides that bring the complex world of **DevOps and platform engineering** to life.
+
+![Hero image](/assets/img/headers/final-banner.png)
 
 Whether you're *just starting out** or looking to **deepen your expertise**, you'll find practical insights and **hands-on tutorials** here—straight from my YouTube channel.
 

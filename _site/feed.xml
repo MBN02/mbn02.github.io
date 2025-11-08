@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2025-10-24T21:34:42+05:30</updated>
+  <updated>2025-11-08T10:38:52+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -20,38 +20,38 @@
 
   
   <entry>
-    <title>Rook ceph: cloud-native storage orchestrator + distributed storage system</title>
-    <link href="http://localhost:4000/posts/rook-ceph/" rel="alternate" type="text/html" title="Rook ceph: cloud-native storage orchestrator + distributed storage system" />
-    <published>2025-10-17T07:39:00+05:30</published>
+    <title>Install Rancher with Lets Encrypt on Kubernetes</title>
+    <link href="http://localhost:4000/posts/rancher-installation/" rel="alternate" type="text/html" title="Install Rancher with Lets Encrypt on Kubernetes" />
+    <published>2025-11-08T08:42:00+05:30</published>
   
-    <updated>2025-10-17T07:39:00+05:30</updated>
+    <updated>2025-11-08T10:23:59+05:30</updated>
   
-    <id>http://localhost:4000/posts/rook-ceph/</id>
-    <content type="text/html" src="http://localhost:4000/posts/rook-ceph/" />
+    <id>http://localhost:4000/posts/rancher-installation/</id>
+    <content type="text/html" src="http://localhost:4000/posts/rancher-installation/" />
     <author>
       <name>MKBN Tech</name>
     </author>
 
   
     
-    <category term="storage" />
+    <category term="rancher" />
     
   
 
-  <summary>Prerequisites:     Kubernetes v1.16 (or) higher   Helm 3.x   Raw devices (no partitions or formatted filesystems)   Raw partitions (no formatted filesystem)   LVM Logical Volumes (no formatted filesystem)   Persistent Volumes available from a storage class in block mode   Installation Requirements:     Ceph OSDs have a dependency on LVM when OSDs are created on raw devices (or) partitions.   Re...</summary>
+  <summary>Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x   Domain name and ability to perform DNS changes   Install nginx ingress controller kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.3/deploy/static/provider/baremetal/deploy.yaml   Change...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Let's build a HA kubernetes cluster on baremetal servers</title>
-    <link href="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" rel="alternate" type="text/html" title="Let&amp;apos;s build a HA kubernetes cluster on baremetal servers" />
-    <published>2025-10-10T19:45:00+05:30</published>
+    <title>Meet Longhorn a cloud native distributed block storage for Kubernetes</title>
+    <link href="http://localhost:4000/posts/longhorn-deploy/" rel="alternate" type="text/html" title="Meet Longhorn a cloud native distributed block storage for Kubernetes" />
+    <published>2025-11-06T08:42:00+05:30</published>
   
-    <updated>2025-10-10T19:45:00+05:30</updated>
+    <updated>2025-11-06T19:20:57+05:30</updated>
   
-    <id>http://localhost:4000/posts/k8s-kubeadm-ha-cluster/</id>
-    <content type="text/html" src="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" />
+    <id>http://localhost:4000/posts/longhorn-deploy/</id>
+    <content type="text/html" src="http://localhost:4000/posts/longhorn-deploy/" />
     <author>
       <name>MKBN Tech</name>
     </author>
@@ -62,7 +62,7 @@
     
   
 
-  <summary>HA Kubernetes cluster with containerd  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   Generate TLS certificates:  Prepare CFSSL on a Single Master Node (Certificate Authority Host): SSH into one of the master-node and run:  {   mkdir ~/certs &amp;amp;&amp;amp; cd ~/certs   wget https://pkg.cfssl.org/R1.2/cfssl_l...</summary>
+  <summary>Cloud native distributed block storage for Kubernetes    🎞️ Watch Video  Prerequisites:  Minimum Hardware requirements:     3 nodes   4 vCPUs per node   4 GiB per node   SSD/NVMe or similar performance block device on the node for storage   Installation Requirements:     A container runtime compatible with Kubernetes (Docker v1.13+, containerd v1.3.7+, etc.)   Kubernetes &amp;gt;= v1.21   open-iscs...</summary>
 
   </entry>
 
@@ -70,9 +70,9 @@
   <entry>
     <title>How to setup loadbalancing with haproxy &amp; keepalived</title>
     <link href="http://localhost:4000/posts/haproxy-keepalived/" rel="alternate" type="text/html" title="How to setup loadbalancing with haproxy &amp;amp; keepalived" />
-    <published>2025-10-10T18:49:00+05:30</published>
+    <published>2025-11-03T14:25:00+05:30</published>
   
-    <updated>2025-10-10T18:49:00+05:30</updated>
+    <updated>2025-11-03T17:02:13+05:30</updated>
   
     <id>http://localhost:4000/posts/haproxy-keepalived/</id>
     <content type="text/html" src="http://localhost:4000/posts/haproxy-keepalived/" />
@@ -86,55 +86,31 @@
     
   
 
-  <summary>Prerequisites:    2 Ubuntu 24.04 node’s   HAProxy Configurations:  SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy   Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip&amp;gt; and add an extra entry for each additi...</summary>
+  <summary>Haproxy with Keepalived    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 node’s   HAProxy Configurations:  SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy   Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Running Jenkins on Kubernetes</title>
-    <link href="http://localhost:4000/posts/Jenkins-on-kuberntes/" rel="alternate" type="text/html" title="Running Jenkins on Kubernetes" />
-    <published>2024-11-04T11:25:00+05:30</published>
+    <title>Let's build a HA kubernetes cluster on baremetal servers</title>
+    <link href="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" rel="alternate" type="text/html" title="Let&amp;apos;s build a HA kubernetes cluster on baremetal servers" />
+    <published>2025-11-03T14:25:00+05:30</published>
   
-    <updated>2024-11-04T11:25:00+05:30</updated>
+    <updated>2025-11-03T17:02:13+05:30</updated>
   
-    <id>http://localhost:4000/posts/Jenkins-on-kuberntes/</id>
-    <content type="text/html" src="http://localhost:4000/posts/Jenkins-on-kuberntes/" />
+    <id>http://localhost:4000/posts/k8s-kubeadm-ha-cluster/</id>
+    <content type="text/html" src="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" />
     <author>
       <name>MKBN Tech</name>
     </author>
 
   
     
-    <category term="jenkins" />
+    <category term="kubernetes" />
     
   
 
-  <summary>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.  Prerequisites:     Kubernetes cluster   Helm 3.x   Installing Jenkins with Helm: Helm v3.0+ must be installed on your workstation.  Add the jenkins Helm repository: helm repo add jenkins https://charts.jenkins.io   Fetch...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Deploy a kubernetes cluster using ansible</title>
-    <link href="http://localhost:4000/posts/k8s-cluster-using-ansible/" rel="alternate" type="text/html" title="Deploy a kubernetes cluster using ansible" />
-    <published>2024-06-29T22:36:00+05:30</published>
-  
-    <updated>2024-06-29T22:36:00+05:30</updated>
-  
-    <id>http://localhost:4000/posts/k8s-cluster-using-ansible/</id>
-    <content type="text/html" src="http://localhost:4000/posts/k8s-cluster-using-ansible/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="kuberntes" />
-    
-  
-
-  <summary>Deploying a Kubernetes cluster can be a daunting task, but with the right tools and guidance, it becomes manageable and efficient. In this blog post, I walk you through the process of setting up a Kubernetes cluster with single master and two worker nodes using Ansible role.  This setup is perfect for development and testing environments, providing a solid foundation to explore Kubernetes’ powe...</summary>
+  <summary>HA Kubernetes cluster with containerd    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   Generate TLS certificates:  Prepare CFSSL on a Single Master Node (Certificate Authority Host): SSH into one of the master-node and run:  {   mkdir ~/certs &amp;amp;&amp;amp; cd ~/certs   wget https://pkg.cfss...</summary>
 
   </entry>
 

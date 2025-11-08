@@ -39,13 +39,13 @@
 <meta property="og:site_name" content="MKBN-Tech" />
 <meta property="og:image" content="http://localhost:4000/assets/img/headers/helm.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-10-10T19:45:00+05:30" />
+<meta property="article:published_time" content="2025-11-03T14:25:00+05:30" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/img/headers/helm.jpg" />
 <meta property="twitter:title" content="Let’s build a HA kubernetes cluster on baremetal servers" />
 <meta name="twitter:site" content="@nk_mohan" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-10T19:45:00+05:30","datePublished":"2025-10-10T19:45:00+05:30","description":"HA Kubernetes cluster with containerd","headline":"Let’s build a HA kubernetes cluster on baremetal servers","image":"http://localhost:4000/assets/img/headers/helm.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/k8s-kubeadm-ha-cluster/"},"url":"http://localhost:4000/posts/k8s-kubeadm-ha-cluster/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-03T17:02:13+05:30","datePublished":"2025-11-03T14:25:00+05:30","description":"HA Kubernetes cluster with containerd","headline":"Let’s build a HA kubernetes cluster on baremetal servers","image":"http://localhost:4000/assets/img/headers/helm.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/k8s-kubeadm-ha-cluster/"},"url":"http://localhost:4000/posts/k8s-kubeadm-ha-cluster/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -254,7 +254,7 @@
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/headers/mkbn-tech.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <a class="site-title d-block" href="/">MKBN-Tech</a>
-    <p class="site-subtitle fst-italic mb-0">Document site for MKBN Tech YouTube Channel.</p>
+    <p class="site-subtitle fst-italic mb-0">Cloud Native Enthusiast・Platform Engineer・Automation Addict・Real-World Tech</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -761,6 +761,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1027,18 +1038,41 @@
 
 <time
   
-  data-ts="1760105700"
+  data-ts="1762160100"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Oct 10, 2025
+  Nov  3, 2025
 </time>
 
       </span>
 
       <!-- lastmod date -->
+      
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1762169533"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Nov  3, 2025
+</time>
+
+        </span>
       
 
       
@@ -1091,7 +1125,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1378 words"
+  title="1367 words"
 >
   <em>7 min</em> read</span>
 
@@ -1125,7 +1159,11 @@
   
 
   <div class="content">
-    <h1 id="ha-kubernetes-cluster-with-containerd">HA Kubernetes cluster with containerd</h1>
+    <h3 id="ha-kubernetes-cluster-with-containerd"><span class="me-2">HA Kubernetes cluster with containerd</span><a href="#ha-kubernetes-cluster-with-containerd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<iframe class="embed-video" loading="lazy" src="https://www.youtube.com/embed/Lbu8aQt-2VU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>🎞️ <a href="https://youtu.be/Lbu8aQt-2VU">Watch Video</a></p>
 
 <h3 id="prerequisites"><span class="me-2">Prerequisites:</span><a href="#prerequisites" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
@@ -1288,12 +1326,12 @@
     "kubernetes.default",
     "kubernetes.default.svc",
     "kubernetes.default.svc.cluster.local",
-    "192.168.122.60",     # Load balancer VIP
-    "192.168.122.101",    # master01 IP
-    "192.168.122.102",    # master02 IP
-    "192.168.122.103",    # master03 IP
-    "192.168.122.51",     # load01 IP
-    "192.168.122.52"      # load02 IP
+    "&lt;Load balancer VIP&gt;",    
+    "&lt;k8s-master-1-ip&gt;",
+    "&lt;k8s-master-2-ip&gt;",
+    "&lt;k8s-master-3-ip&gt;",
+    "&lt;load-01 IP&gt;",     
+    "&lt;load-02 IP&gt;"      
   ],
   "key": {
     "algo": "rsa",
@@ -1419,7 +1457,7 @@
 6
 7
 </pre></td><td class="rouge-code"><pre><span class="o">{</span>
-<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">NODES</span><span class="o">=(</span>192.168.122.101 192.168.122.102 192.168.122.103<span class="o">)</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">NODES</span><span class="o">=(</span>&lt;k8s-master-1-ip&gt; &lt;k8s-master-2-ip&gt; &lt;k8s-master-3-ip&gt;<span class="o">)</span>
 
 <span class="k">for </span>node <span class="k">in</span> <span class="k">${</span><span class="nv">NODES</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
   </span>scp ca.pem kubernetes.pem kubernetes-key.pem root@<span class="nv">$node</span>:/etc/kubernetes/pki/
@@ -1663,7 +1701,7 @@ apt-mark hold kubelet kubeadm kubectl
 6
 7
 </pre></td><td class="rouge-code"><pre><span class="o">{</span>
-<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">NODES</span><span class="o">=(</span>192.168.122.101 192.168.122.102 192.168.122.103<span class="o">)</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">NODES</span><span class="o">=(</span>&lt;k8s-master-1-ip&gt; &lt;k8s-master-2-ip&gt; &lt;k8s-master-3-ip&gt;<span class="o">)</span>
 
 <span class="k">for </span>node <span class="k">in</span> <span class="k">${</span><span class="nv">NODES</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
   </span>scp ca.pem kubernetes.pem kubernetes-key.pem root@<span class="nv">$node</span>: 
@@ -1988,7 +2026,7 @@ apiServerExtraArgs:
 
 <p><em>If you use custom podCIDR (not 10.244.0.0/16) you first need to download the above manifest and modify the network to match your one</em></p>
 
-<h3 id="reference-links"><span class="me-2">Reference Links:</span><a href="#reference-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="-reference-links"><span class="me-2">🔗 Reference Links:</span><a href="#-reference-links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -2133,7 +2171,14 @@ apiServerExtraArgs:
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/rook-ceph/">Rook ceph: cloud-native storage orchestrator + distributed storage system</a>
+          <a href="/posts/rancher-installation/">Install Rancher with Lets Encrypt on Kubernetes</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/longhorn-deploy/">Meet Longhorn a cloud native distributed block storage for Kubernetes</a>
         </li>
       
         
@@ -2148,20 +2193,6 @@ apiServerExtraArgs:
         
         <li class="text-truncate lh-lg">
           <a href="/posts/haproxy-keepalived/">How to setup loadbalancing with haproxy & keepalived</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Jenkins-on-kuberntes/">Running Jenkins on Kubernetes</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/k8s-cluster-using-ansible/">Deploy a kubernetes cluster using ansible</a>
         </li>
       
     </ul>
@@ -2190,50 +2221,6 @@ apiServerExtraArgs:
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -2290,271 +2277,6 @@ apiServerExtraArgs:
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2579,25 +2301,7 @@ apiServerExtraArgs:
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>
@@ -2666,67 +2370,19 @@ apiServerExtraArgs:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2742,34 +2398,6 @@ apiServerExtraArgs:
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/purellb-openlb-installation/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1693404000"
-  data-df="ll"
-  
->
-  Aug 30, 2023
-</time>
-
-              <h4 class="pt-0 my-2">PureLB & OpenELB: LB implementations for bare-metal K8s clusters</h4>
-              <div class="text-muted">
-                <p>PureLB PureLB is a Service Load Balancer Controller for Kubernetes.  Instal PureLB using helm charts:  helm repo add purelb https://gitlab.com/api/v4/projects/20400619/packages/helm/stable  helm re...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/longhorn-deploy/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -2782,44 +2410,16 @@ apiServerExtraArgs:
 
 <time
   
-  data-ts="1691133960"
+  data-ts="1762398720"
   data-df="ll"
   
 >
-  Aug  4, 2023
+  Nov  6, 2025
 </time>
 
               <h4 class="pt-0 my-2">Meet Longhorn a cloud native distributed block storage for Kubernetes</h4>
               <div class="text-muted">
-                <p>Prerequisites:  Minimum Hardware requirements:     3 nodes   4 vCPUs per node   4 GiB per node   SSD/NVMe or similar performance block device on the node for storage   Installation Requirements:   ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/kubernetes-dashboard/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1691036760"
-  data-df="ll"
-  
->
-  Aug  3, 2023
-</time>
-
-              <h4 class="pt-0 my-2">Deploy kubernetes dashboard with user account + Ingress</h4>
-              <div class="text-muted">
-                <p>Kubernetes dashboard is a web-based user interface. You can use Dashboard to deploy containerized applications to a Kubernetes cluster, troubleshoot your containerized application, and manage the c...</p>
+                <p>Cloud native distributed block storage for Kubernetes  {% include embed/youtube.html id=’ts7LAnM744Y’ %}  🎞️ Watch Video  Prerequisites:  Minimum Hardware requirements:     3 nodes   4 vCPUs per no...</p>
               </div>
             </div>
           </a>
@@ -2839,22 +2439,18 @@ apiServerExtraArgs:
   
 
   
-    <a
-      href="/posts/haproxy-keepalived/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>How to setup loadbalancing with haproxy & keepalived</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Older">
+      <p>-</p>
+    </div>
   
 
   
     <a
-      href="/posts/rook-ceph/"
+      href="/posts/haproxy-keepalived/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Rook ceph: cloud-native storage orchestrator + distributed storage system</p>
+      <p>How to setup loadbalancing with haproxy & keepalived</p>
     </a>
   
 </nav>
@@ -2889,7 +2485,7 @@ apiServerExtraArgs:
   <p>Using the <a
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title="v7.4.0"
+        title="v7.4.1"
         href="https://github.com/cotes2020/jekyll-theme-chirpy"
         target="_blank"
         rel="noopener"
@@ -2926,50 +2522,6 @@ apiServerExtraArgs:
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
       
         
         
@@ -3026,271 +2578,6 @@ apiServerExtraArgs:
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -3315,25 +2602,7 @@ apiServerExtraArgs:
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/loadbalancer/">loadbalancer</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ansible/">ansible</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/ceph/">ceph</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cert-manager/">cert-manager</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dashboard/">dashboard</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/haproxy/">haproxy</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jenkins/">jenkins</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kubernetes/">kubernetes</a>
