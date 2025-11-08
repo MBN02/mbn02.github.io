@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Install Rancher with Lets Encrypt on Kubernetes"
-date: 2025-11-08 12:12:00 +0800
+date: 2025-11-08 11:12:00 +0800
 categories: rancher
 tags: rancher
 image:
