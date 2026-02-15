@@ -1,6 +1,15 @@
 [
   
   {
+    "title": "Supercharge Kubernetes with kubectl ai",
+    "url": "/posts/kubectl-ai/",
+    "categories": "kubernetes",
+    "tags": "rke2",
+    "date": "2025-12-27 08:42:00 +0530",
+    "content": "Google’s kubectl-ai is a revolutionary open-source project that seamlessly integrates with Large Language Models (LLMs) like gemini, bedrock and local LLM providers such as ollama with Kubernetes operations, enabling users to interact with Kuberntes clusters using natural language.    🎞️ Watch Video  Pre-requisits     Kubernetes cluster   Kubectl is installed and configured   Helm installaed and configured   Install ollama on your machine  curl -fsSL https://ollama.com/install.sh | sh   Verify ollama --version   Pull a lightweight model — we’ll use Gemma 3 4‑B for the demo: ollama pull gemma3:4b   kubectl‑ai  Ensure that you have kubectl is installed and configured. because kubectl-ai is a plugin that sits next to kubectl in your terminal.  curl -sSL https://raw.githubusercontent.com/GoogleCloudPlatform/kubectl-ai/main/install.sh | bash   Verify kubectl ai version   Lets Ask our cluster a question : kubectl ai --llm-provider ollama --model gemma3:4b --enable-tool-use-shim   You can also configure kubectl-ai using a YAML configuration file at ~/.config/kubectl-ai/config.yaml to persist those flags so you don’t have to re‑type them in.  { mkdir -p ~/.config/kubectl-ai/ cat &lt;&lt;EOF &gt; ~/.config/kubectl-ai/config.yaml model: gemma3:4b llmProvider: ollama enableToolUseShim: true toolConfigPaths:      - ~/.config/kubectl-ai/tools.yaml EOF }   verify your configuration kubectl-ai model   We can Extend the Agent with Custom Tools  kubectl-ai can call any binary you describe in ~/.config/kubectl-ai/tools.yaml.  { cat &lt;&lt;EOF &gt; ~/.config/kubectl-ai/tools.yaml - name: helm   description: \"Helm is the Kubernetes package manager.\"   command: \"helm\"   is_custom: true EOF }   To enable the custom tools, you must point kubectl-ai to the directory containing the tool configuration YAML files using the --custom-tools-config flag. kubectl-ai --custom-tools-config=~/.config/kubectl-ai/tools.yaml \"helm list\"   Install Python and Create a Virtual Environment  First, make sure you have Python installed. You can verify this by running: python3 --version  In the directory where you want your project, open a terminal and run: python3 -m venv ollama-env  Activate the environment by running:  source ollama-env/bin/activate   Install the Ollama Python library: pip3 install ollama   Run the python app python3 python-app/kubectlai-app.py   🔗 Reference Links:          kubectl-ai           Github repo"
+  },
+  
+  {
     "title": "RKE2 Cluster Installation With Ansible",
     "url": "/posts/rke2-ha-ansible/",
     "categories": "kubernetes",

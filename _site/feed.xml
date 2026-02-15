@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-16T00:02:11+05:30</updated>
+  <updated>2026-02-16T00:32:31+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Supercharge Kubernetes with kubectl ai</title>
+    <link href="http://localhost:4000/posts/kubectl-ai/" rel="alternate" type="text/html" title="Supercharge Kubernetes with kubectl ai" />
+    <published>2025-12-27T08:42:00+05:30</published>
+  
+    <updated>2025-12-27T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/kubectl-ai/</id>
+    <content type="text/html" src="http://localhost:4000/posts/kubectl-ai/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="kubernetes" />
+    
+  
+
+  <summary>Google’s kubectl-ai is a revolutionary open-source project that seamlessly integrates with Large Language Models (LLMs) like gemini, bedrock and local LLM providers such as ollama with Kubernetes operations, enabling users to interact with Kuberntes clusters using natural language.    🎞️ Watch Video  Pre-requisits     Kubernetes cluster   Kubectl is installed and configured   Helm installaed an...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Having a robust monitoring stack on Kubernetes is essential to ensure the reliability, performance, and security of your applications and infrastructure.With real-time dashboards and correlated insights, the teams can optimize resource usage, enforce SLOs, and minimize downtime for modern cloud-native environments.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x 0r 4.x   kub...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Local AI Stack : Ollama + NVIDIA GPU Operator + Open WebUI</title>
-    <link href="http://localhost:4000/posts/local-ai-stack/" rel="alternate" type="text/html" title="Local AI Stack : Ollama + NVIDIA GPU Operator + Open WebUI" />
-    <published>2025-11-19T08:42:00+05:30</published>
-  
-    <updated>2025-11-19T08:42:00+05:30</updated>
-  
-    <id>http://localhost:4000/posts/local-ai-stack/</id>
-    <content type="text/html" src="http://localhost:4000/posts/local-ai-stack/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-  
-
-  <summary>If you have a workstation/server with nvidia GPU and would like to have a full AI-ready stack running with large language model’s and Open WebUI - all within your own Kubernetes cluster for AI model deployment and testing then this video is for you.    🎞️ Watch Video  Install nvidia drivers for your GPU # Check your GPU's PCI address lspci -nn | grep -i nvidia  # check the list of drivers sudo ...</summary>
 
   </entry>
 
