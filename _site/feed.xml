@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T23:41:40+05:30</updated>
+  <updated>2026-02-16T00:02:11+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>RKE2 Cluster Installation With Ansible</title>
+    <link href="http://localhost:4000/posts/rke2-ha-ansible/" rel="alternate" type="text/html" title="RKE2 Cluster Installation With Ansible" />
+    <published>2025-12-24T08:42:00+05:30</published>
+  
+    <updated>2025-12-24T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/rke2-ha-ansible/</id>
+    <content type="text/html" src="http://localhost:4000/posts/rke2-ha-ansible/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="kubernetes" />
+    
+  
+
+  <summary>RKE2 is Rancher’s enterprise-ready next-generation Kubernetes distribution.It delivers upstream‑compatible Kubernetes with built‑in security hardening, compliance‑friendly by defaults, and a simple operational model that scales cleanly from data center to edge.    🎞️ Watch Video  Pre-requisits     6 Ubuntu 24.04 LTS on all nodes [ 3 servers and 3 agent nodes]   Ansible controller node   Set hos...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>If you have a workstation/server with nvidia GPU and would like to have a full AI-ready stack running with large language model’s and Open WebUI - all within your own Kubernetes cluster for AI model deployment and testing then this video is for you.    🎞️ Watch Video  Install nvidia drivers for your GPU # Check your GPU's PCI address lspci -nn | grep -i nvidia  # check the list of drivers sudo ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Kuberntes Cluster Deployment with Ansible</title>
-    <link href="http://localhost:4000/posts/k8s-with-ansible/" rel="alternate" type="text/html" title="Kuberntes Cluster Deployment with Ansible" />
-    <published>2025-11-15T08:42:00+05:30</published>
-  
-    <updated>2025-11-15T08:42:00+05:30</updated>
-  
-    <id>http://localhost:4000/posts/k8s-with-ansible/</id>
-    <content type="text/html" src="http://localhost:4000/posts/k8s-with-ansible/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="ansible" />
-    
-  
-
-  <summary>Automate the setup of a Kubernetes cluster using Ansible. We’ll build a single master node and two worker nodes — all provisioned and configured through automation.    🎞️ Watch Video  Prerequisites:     Ubuntu 22.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Kubernetes knowledge   Create a inventory file:  [control_plane] master-node ansible_host=192....</summary>
 
   </entry>
 
