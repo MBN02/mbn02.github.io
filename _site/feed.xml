@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T23:24:18+05:30</updated>
+  <updated>2026-02-15T23:41:40+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Install an external Ceph cluster using ansible</title>
+    <link href="http://localhost:4000/posts/ceph-ansible/" rel="alternate" type="text/html" title="Install an external Ceph cluster using ansible" />
+    <published>2025-12-21T08:42:00+05:30</published>
+  
+    <updated>2025-12-21T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/ceph-ansible/</id>
+    <content type="text/html" src="http://localhost:4000/posts/ceph-ansible/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="storage" />
+    
+  
+
+  <summary>Ceph provides scalable, distributed object storage that is self-healing and eliminates single points of failure, making it ideal for handling massive data volumes in cloud environments. Its architecture uses daemons like Monitors (MONs) for cluster maps, OSDs for data storage and replication, and the CRUSH algorithm for decentralized data placement.    🎞️ Watch Video  Pre-requisits     3 ubuntu...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Automate the setup of a Kubernetes cluster using Ansible. We’ll build a single master node and two worker nodes — all provisioned and configured through automation.    🎞️ Watch Video  Prerequisites:     Ubuntu 22.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Kubernetes knowledge   Create a inventory file:  [control_plane] master-node ansible_host=192....</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Deploy Self-Hosted GitLab on Ubuntu with Ansible</title>
-    <link href="http://localhost:4000/posts/gitlab/" rel="alternate" type="text/html" title="Deploy Self-Hosted GitLab on Ubuntu with Ansible" />
-    <published>2025-11-12T08:42:00+05:30</published>
-  
-    <updated>2026-02-15T07:15:37+05:30</updated>
-  
-    <id>http://localhost:4000/posts/gitlab/</id>
-    <content type="text/html" src="http://localhost:4000/posts/gitlab/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="ci" />
-    
-  
-
-  <summary>*GitLab is a unified DevOps platform that empowers teams to manage every phase of the software development lifecycle—from planning and source code management to CI/CD and deployment within a single application. *    🎞️ Watch Video  Prerequisites:     Ubuntu 24.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Ansible knowledge   Create a inventory file:  ...</summary>
 
   </entry>
 
