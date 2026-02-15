@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T07:24:22+05:30</updated>
+  <updated>2026-02-15T09:39:52+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Local AI Stack : Ollama + NVIDIA GPU Operator + Open WebUI</title>
+    <link href="http://localhost:4000/posts/local-ai-stack/" rel="alternate" type="text/html" title="Local AI Stack : Ollama + NVIDIA GPU Operator + Open WebUI" />
+    <published>2025-11-19T08:42:00+05:30</published>
+  
+    <updated>2025-11-19T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/local-ai-stack/</id>
+    <content type="text/html" src="http://localhost:4000/posts/local-ai-stack/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>If you have a workstation/server with nvidia GPU and would like to have a full AI-ready stack running with large language model’s and Open WebUI - all within your own Kubernetes cluster for AI model deployment and testing then this video is for you.    🎞️ Watch Video  Install nvidia drivers for your GPU # Check your GPU's PCI address lspci -nn | grep -i nvidia  # check the list of drivers sudo ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Cloud native distributed block storage for Kubernetes    🎞️ Watch Video  Prerequisites:  Minimum Hardware requirements:     3 nodes   4 vCPUs per node   4 GiB per node   SSD/NVMe or similar performance block device on the node for storage   Installation Requirements:     A container runtime compatible with Kubernetes (Docker v1.13+, containerd v1.3.7+, etc.)   Kubernetes &amp;gt;= v1.21   open-iscs...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>How to setup loadbalancing with haproxy &amp; keepalived</title>
-    <link href="http://localhost:4000/posts/haproxy-keepalived/" rel="alternate" type="text/html" title="How to setup loadbalancing with haproxy &amp;amp; keepalived" />
-    <published>2025-11-03T14:25:00+05:30</published>
-  
-    <updated>2025-11-03T17:02:13+05:30</updated>
-  
-    <id>http://localhost:4000/posts/haproxy-keepalived/</id>
-    <content type="text/html" src="http://localhost:4000/posts/haproxy-keepalived/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="loadbalancer" />
-    
-  
-
-  <summary>Haproxy with Keepalived    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 node’s   HAProxy Configurations:  SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy   Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip...</summary>
 
   </entry>
 
