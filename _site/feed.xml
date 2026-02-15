@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-16T00:32:31+05:30</updated>
+  <updated>2026-02-16T00:41:13+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,35 @@
 
   
   <entry>
+    <title>Running Jenkins on Kubernetes</title>
+    <link href="http://localhost:4000/posts/jenkins/" rel="alternate" type="text/html" title="Running Jenkins on Kubernetes" />
+    <published>2025-12-31T11:25:00+05:30</published>
+  
+    <updated>2025-12-31T11:25:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/jenkins/</id>
+    <content type="text/html" src="http://localhost:4000/posts/jenkins/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="jenkins" />
+    
+  
+
+  <summary>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 4.x   Installing Jenkins with Helm: Helm v3.0+ must be installed on your workstation.  Artifact Hub is a web-based application that enables finding, and inst...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Supercharge Kubernetes with kubectl ai</title>
     <link href="http://localhost:4000/posts/kubectl-ai/" rel="alternate" type="text/html" title="Supercharge Kubernetes with kubectl ai" />
     <published>2025-12-27T08:42:00+05:30</published>
   
-    <updated>2025-12-27T08:42:00+05:30</updated>
+    <updated>2026-02-16T00:37:53+05:30</updated>
   
     <id>http://localhost:4000/posts/kubectl-ai/</id>
     <content type="text/html" src="http://localhost:4000/posts/kubectl-ai/" />
@@ -111,30 +135,6 @@
   
 
   <summary>Kubernetes clusters are complex, generating vast amounts of logs and events that are difficult to parse manually. k8sgpt empowers SREs and devops engineers by automating root cause analysis through AI, reducing mean-time-to-resolution (MTTR) considerably.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x 0r 4.x   kubectl configured   Deploy Ollama LLM in Kubernetes  Create Nam...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Monitoring with Prometheus, Grafana, and Loki</title>
-    <link href="http://localhost:4000/posts/monitoring-stack/" rel="alternate" type="text/html" title="Monitoring with Prometheus, Grafana, and Loki" />
-    <published>2025-11-28T08:42:00+05:30</published>
-  
-    <updated>2025-11-28T08:42:00+05:30</updated>
-  
-    <id>http://localhost:4000/posts/monitoring-stack/</id>
-    <content type="text/html" src="http://localhost:4000/posts/monitoring-stack/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="monitoring" />
-    
-  
-
-  <summary>Having a robust monitoring stack on Kubernetes is essential to ensure the reliability, performance, and security of your applications and infrastructure.With real-time dashboards and correlated insights, the teams can optimize resource usage, enforce SLOs, and minimize downtime for modern cloud-native environments.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x 0r 4.x   kub...</summary>
 
   </entry>
 
