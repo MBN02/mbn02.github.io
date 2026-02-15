@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T09:39:52+05:30</updated>
+  <updated>2026-02-15T18:35:27+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Monitoring with Prometheus, Grafana, and Loki</title>
+    <link href="http://localhost:4000/posts/monitoring-stack/" rel="alternate" type="text/html" title="Monitoring with Prometheus, Grafana, and Loki" />
+    <published>2025-11-28T08:42:00+05:30</published>
+  
+    <updated>2025-11-28T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/monitoring-stack/</id>
+    <content type="text/html" src="http://localhost:4000/posts/monitoring-stack/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="monitoring" />
+    
+  
+
+  <summary>Having a robust monitoring stack on Kubernetes is essential to ensure the reliability, performance, and security of your applications and infrastructure.With real-time dashboards and correlated insights, the teams can optimize resource usage, enforce SLOs, and minimize downtime for modern cloud-native environments.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x 0r 4.x   kub...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x   Domain name and ability to perform DNS changes   Install nginx ingress controller kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.3/deploy/static/provider/baremetal/deploy.yaml   Change...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Meet Longhorn a cloud native distributed block storage for Kubernetes</title>
-    <link href="http://localhost:4000/posts/longhorn-deploy/" rel="alternate" type="text/html" title="Meet Longhorn a cloud native distributed block storage for Kubernetes" />
-    <published>2025-11-06T08:42:00+05:30</published>
-  
-    <updated>2025-11-06T19:20:57+05:30</updated>
-  
-    <id>http://localhost:4000/posts/longhorn-deploy/</id>
-    <content type="text/html" src="http://localhost:4000/posts/longhorn-deploy/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="kubernetes" />
-    
-  
-
-  <summary>Cloud native distributed block storage for Kubernetes    🎞️ Watch Video  Prerequisites:  Minimum Hardware requirements:     3 nodes   4 vCPUs per node   4 GiB per node   SSD/NVMe or similar performance block device on the node for storage   Installation Requirements:     A container runtime compatible with Kubernetes (Docker v1.13+, containerd v1.3.7+, etc.)   Kubernetes &amp;gt;= v1.21   open-iscs...</summary>
 
   </entry>
 
