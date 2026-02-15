@@ -3,7 +3,7 @@ layout: post
 title: "Supercharge Kubernetes with kubectl ai"
 date: 2025-12-27 11:12:00 +0800
 categories: kubernetes
-tags: rke2
+tags: AI
 image:
   path: /assets/img/headers/kubectl-ai.jpg
 ---
