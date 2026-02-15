@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2025-11-08T10:38:52+05:30</updated>
+  <updated>2026-02-15T07:13:59+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -13,10 +13,34 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
-  <rights> © 2025 MKBN Tech </rights>
+  <rights> © 2026 MKBN Tech </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Deploy Self-Hosted GitLab on Ubuntu with Ansible</title>
+    <link href="http://localhost:4000/posts/gitlab/" rel="alternate" type="text/html" title="Deploy Self-Hosted GitLab on Ubuntu with Ansible" />
+    <published>2025-11-12T08:42:00+05:30</published>
+  
+    <updated>2026-02-15T06:49:11+05:30</updated>
+  
+    <id>http://localhost:4000/posts/gitlab/</id>
+    <content type="text/html" src="http://localhost:4000/posts/gitlab/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="ci" />
+    
+  
+
+  <summary>*GitLab is a unified DevOps platform that empowers teams to manage every phase of the software development lifecycle—from planning and source code management to CI/CD and deployment within a single application. *    🎞️ Watch Video  Prerequisites:     Ubuntu 24.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Ansible knowledge   Create a inventory file:  ...</summary>
+
+  </entry>
 
   
   <entry>

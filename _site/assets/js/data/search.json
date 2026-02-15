@@ -1,6 +1,15 @@
 [
   
   {
+    "title": "Deploy Self-Hosted GitLab on Ubuntu with Ansible",
+    "url": "/posts/gitlab/",
+    "categories": "ci",
+    "tags": "ci",
+    "date": "2025-11-12 08:42:00 +0530",
+    "content": "*GitLab is a unified DevOps platform that empowers teams to manage every phase of the software development lifecycle—from planning and source code management to CI/CD and deployment within a single application. *    🎞️ Watch Video  Prerequisites:     Ubuntu 24.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Ansible knowledge   Create a inventory file:  [gitlab] gitlab-server ansible_host=X.X.X.X  #host ip addess  [all:vars] ansible_python_interpreter=/usr/bin/python3  [gitlab:vars] ansible_ssh_private_key_file=/home/mkbntech/.ssh/id_ed25519 ansible_user=root   To set up a gitlab instance, run the following Ansible playbook:  - name: Setup self-hosted gitlab server   hosts: gitlab   become: true   roles:     - self-hosted-gitlab-instance   Executing the role to install gitlab server  $ ansible-playbook -i inventory playbook.yaml   🔗 Reference Links:          Installing GitLab           GitHub-Repo"
+  },
+  
+  {
     "title": "Install Rancher with Lets Encrypt on Kubernetes",
     "url": "/posts/rancher-installation/",
     "categories": "rancher",
