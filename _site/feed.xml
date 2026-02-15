@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T18:35:27+05:30</updated>
+  <updated>2026-02-15T23:24:18+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>AI-Powered Kubernetes Troubleshooting with K8sGPT</title>
+    <link href="http://localhost:4000/posts/k8sgpt/" rel="alternate" type="text/html" title="AI-Powered Kubernetes Troubleshooting with K8sGPT" />
+    <published>2025-12-06T08:42:00+05:30</published>
+  
+    <updated>2025-12-06T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/k8sgpt/</id>
+    <content type="text/html" src="http://localhost:4000/posts/k8sgpt/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>Kubernetes clusters are complex, generating vast amounts of logs and events that are difficult to parse manually. k8sgpt empowers SREs and devops engineers by automating root cause analysis through AI, reducing mean-time-to-resolution (MTTR) considerably.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x 0r 4.x   kubectl configured   Deploy Ollama LLM in Kubernetes  Create Nam...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>*GitLab is a unified DevOps platform that empowers teams to manage every phase of the software development lifecycle—from planning and source code management to CI/CD and deployment within a single application. *    🎞️ Watch Video  Prerequisites:     Ubuntu 24.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Ansible knowledge   Create a inventory file:  ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Install Rancher with Lets Encrypt on Kubernetes</title>
-    <link href="http://localhost:4000/posts/rancher-installation/" rel="alternate" type="text/html" title="Install Rancher with Lets Encrypt on Kubernetes" />
-    <published>2025-11-08T08:42:00+05:30</published>
-  
-    <updated>2025-11-08T10:23:59+05:30</updated>
-  
-    <id>http://localhost:4000/posts/rancher-installation/</id>
-    <content type="text/html" src="http://localhost:4000/posts/rancher-installation/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="rancher" />
-    
-  
-
-  <summary>Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider.    🎞️ Watch Video  Prerequisites:     Kubernetes cluster   Helm 3.x   Domain name and ability to perform DNS changes   Install nginx ingress controller kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.3/deploy/static/provider/baremetal/deploy.yaml   Change...</summary>
 
   </entry>
 
