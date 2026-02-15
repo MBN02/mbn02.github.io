@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MKBN-Tech</title>
   <subtitle>Document site for MKBN Tech YouTube Channel.</subtitle>
-  <updated>2026-02-15T07:13:59+05:30</updated>
+  <updated>2026-02-15T07:24:22+05:30</updated>
   <author>
     <name>MKBN Tech</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,35 @@
 
   
   <entry>
+    <title>Kuberntes Cluster Deployment with Ansible</title>
+    <link href="http://localhost:4000/posts/k8s-with-ansible/" rel="alternate" type="text/html" title="Kuberntes Cluster Deployment with Ansible" />
+    <published>2025-11-15T08:42:00+05:30</published>
+  
+    <updated>2025-11-15T08:42:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/k8s-with-ansible/</id>
+    <content type="text/html" src="http://localhost:4000/posts/k8s-with-ansible/" />
+    <author>
+      <name>MKBN Tech</name>
+    </author>
+
+  
+    
+    <category term="ansible" />
+    
+  
+
+  <summary>Automate the setup of a Kubernetes cluster using Ansible. We’ll build a single master node and two worker nodes — all provisioned and configured through automation.    🎞️ Watch Video  Prerequisites:     Ubuntu 22.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Kubernetes knowledge   Create a inventory file:  [control_plane] master-node ansible_host=192....</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Deploy Self-Hosted GitLab on Ubuntu with Ansible</title>
     <link href="http://localhost:4000/posts/gitlab/" rel="alternate" type="text/html" title="Deploy Self-Hosted GitLab on Ubuntu with Ansible" />
     <published>2025-11-12T08:42:00+05:30</published>
   
-    <updated>2026-02-15T06:49:11+05:30</updated>
+    <updated>2026-02-15T07:15:37+05:30</updated>
   
     <id>http://localhost:4000/posts/gitlab/</id>
     <content type="text/html" src="http://localhost:4000/posts/gitlab/" />
@@ -111,30 +135,6 @@
   
 
   <summary>Haproxy with Keepalived    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 node’s   HAProxy Configurations:  SSH to the nodes which will function as the load balancer and execute the following commands to install HAProxy. apt update &amp;amp;&amp;amp; apt install -y haproxy   Edit haproxy.cfg to connect it to the master nodes, set the correct values for &amp;lt;loadbalancer-vip&amp;gt; and &amp;lt;kube-masterX-ip...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Let's build a HA kubernetes cluster on baremetal servers</title>
-    <link href="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" rel="alternate" type="text/html" title="Let&amp;apos;s build a HA kubernetes cluster on baremetal servers" />
-    <published>2025-11-03T14:25:00+05:30</published>
-  
-    <updated>2025-11-03T17:02:13+05:30</updated>
-  
-    <id>http://localhost:4000/posts/k8s-kubeadm-ha-cluster/</id>
-    <content type="text/html" src="http://localhost:4000/posts/k8s-kubeadm-ha-cluster/" />
-    <author>
-      <name>MKBN Tech</name>
-    </author>
-
-  
-    
-    <category term="kubernetes" />
-    
-  
-
-  <summary>HA Kubernetes cluster with containerd    🎞️ Watch Video  Prerequisites:    2 Ubuntu 24.04 LoadBalancer node’s   3 Ubuntu 24.04 Kubernetes master node’s   3 Ubuntu 24.04 Kubernetes worker node’s   Generate TLS certificates:  Prepare CFSSL on a Single Master Node (Certificate Authority Host): SSH into one of the master-node and run:  {   mkdir ~/certs &amp;amp;&amp;amp; cd ~/certs   wget https://pkg.cfss...</summary>
 
   </entry>
 

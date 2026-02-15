@@ -1,6 +1,15 @@
 [
   
   {
+    "title": "Kuberntes Cluster Deployment with Ansible",
+    "url": "/posts/k8s-with-ansible/",
+    "categories": "ansible",
+    "tags": "ansible",
+    "date": "2025-11-15 08:42:00 +0530",
+    "content": "Automate the setup of a Kubernetes cluster using Ansible. We’ll build a single master node and two worker nodes — all provisioned and configured through automation.    🎞️ Watch Video  Prerequisites:     Ubuntu 22.04 or compatible Linux distribution   Ansible installed (for running Ansible playbooks)   Kubernetes knowledge   Create a inventory file:  [control_plane] master-node ansible_host=192.168.X.A  [workers] worker-node1 ansible_host=192.168.X.B worker-node2 ansible_host=192.168.X.C  [all:vars] ansible_python_interpreter=/usr/bin/python3  [control_plane:vars] ansible_ssh_private_key_file= /root/.ssh/id_rsa ansible_user=root  [workers:vars] ansible_ssh_private_key_file= /root/.ssh/id_rsa ansible_user=root   To set up a gitlab instance, run the following Ansible playbook:  --- - name: Setup Kubernetes Cluster   hosts: all   become: true   roles:     - k8s-cluster-with-ansible   Executing the role to install gitlab server  ansible-playbook -i inventory setup_kubernetes.yml   🔗 Reference Links:          Installing GitLab           GitHub-Repo"
+  },
+  
+  {
     "title": "Deploy Self-Hosted GitLab on Ubuntu with Ansible",
     "url": "/posts/gitlab/",
     "categories": "ci",
